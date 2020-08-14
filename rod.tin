@@ -1,0 +1,17 @@
+#session RoD realmsofdespair.com 4000
+
+#alias sc sacrifice corpse
+#alias bb #10 {buy bread;put bread chest}
+#alias br #10 {buy rabbit; put rabbit chest}
+#alias aenari {#8 n;ne;w;n;ne;nw;e;ne;n;e;ne;#2 n;#2 ne;#2 e;n;ne;nw;w;#4 n;enter;ne;w}
+#alias agstyle {style aggressive}
+#alias defstyle {style defensive}
+#alias heal {quaff purple chest}
+#alias stats score
+#alias recall {take recall chest; recite recall}
+#alias end {save; quit; #end}
+
+#action {You are STARVING} {take rabbit chest; eat rabbit}
+#action {You are DYING of THIRST} {take dragonskin chest; drink dragonskin; put dragonskin chest}
+#action {DISARMS your oar} {take oar; wear oar}1
+#action {DISARMS your %1 %2} {take %1; wear %1}
