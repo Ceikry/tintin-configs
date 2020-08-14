@@ -1,17 +1,30 @@
 #session RoD realmsofdespair.com 4000
+#split
+
+#variable {con} {birch chest}
+#variable {wcon} {dragonskin}
+#variable {pot} {glowing purple potion}
+#variable {food} {rabbit}
+
+
+#action {You are STARVING} {take '$food' '$con'; eat '$food'}
+#action {You are DYING of THIRST} {take '$wcon' '$con'; drink '$wcon'; put '$wcon' '$con'}
+#action {DISARMS your %1} {take %1; wear %1} {2}
+#action {DISARMS your %1 %2} {take %1; wear %1} {1}
+#action {You empty a bag into} {drop bag; sacrifice bag}
+#action {is knocked from your hand and shatters!} {heal}
+
 
 #alias sc sacrifice corpse
-#alias bb #10 {buy bread;put bread chest}
-#alias br #10 {buy rabbit; put rabbit chest}
+#alias bf {buy 25 '$food'; empty bag '$con'}
+#alias bp #2 {buy 50 '$pot'; empty bag '$con'}
 #alias aenari {#8 n;ne;w;n;ne;nw;e;ne;n;e;ne;#2 n;#2 ne;#2 e;n;ne;nw;w;#4 n;enter;ne;w}
+#alias eels {s;s;s;s;s;s;ne;s;s;se;e;e;s;sw;sw;s;e;e;u;e;e;e;ne;e;e;e;e;s;se;s;e;e;s;e;e;plunge;s;s;s;se;s;d;d;d;s;s;e;e;e;s;s;e;e
 #alias agstyle {style aggressive}
 #alias defstyle {style defensive}
-#alias heal {quaff purple chest}
+#alias heal {quaff '$pot' '$con'}
 #alias stats score
-#alias recall {take recall chest; recite recall}
+#alias recall {take recall '$con'; recite recall}
 #alias end {save; quit; #end}
-
-#action {You are STARVING} {take rabbit chest; eat rabbit}
-#action {You are DYING of THIRST} {take dragonskin chest; drink dragonskin; put dragonskin chest}
-#action {DISARMS your oar} {take oar; wear oar}1
-#action {DISARMS your %1 %2} {take %1; wear %1}
+#alias ls {examine '$con'; inv}
+#alias fw {take '$wcon' '$con'; fill '$wcon'; put '$wcon' '$con'}
